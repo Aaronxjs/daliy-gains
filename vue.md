@@ -12,8 +12,6 @@ deactivated     for keep-alive, 组件被移除时调用
 beforeDestory   组件销毁前调用
 destoryed       组件销毁后调用
 
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -34,43 +32,43 @@ destoryed       组件销毁后调用
           message : "xuxiao is boy" 
       },
        beforeCreate: function () {
-                console.group('beforeCreate 创建前状态===============》');
-               console.log("%c%s", "color:red" , "el     : " + this.$el); //undefined
-               console.log("%c%s", "color:red","data   : " + this.$data); //undefined 
-               console.log("%c%s", "color:red","message: " + this.message)  
+            console.group('beforeCreate 创建前状态===============》');
+            console.log("%c%s", "color:red" , "el     : " + this.$el); //undefined
+            console.log("%c%s", "color:red","data   : " + this.$data); //undefined 
+            console.log("%c%s", "color:red","message: " + this.message)  
         },
         created: function () {
             console.group('created 创建完毕状态===============》');
             console.log("%c%s", "color:red","el     : " + this.$el); //undefined
-               console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化 
-               console.log("%c%s", "color:red","message: " + this.message); //已被初始化
+            console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化 
+            console.log("%c%s", "color:red","message: " + this.message); //已被初始化
         },
         beforeMount: function () {
             console.group('beforeMount 挂载前状态===============》');
             console.log("%c%s", "color:red","el     : " + (this.$el)); //已被初始化
             console.log(this.$el);
-               console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化  
-               console.log("%c%s", "color:red","message: " + this.message); //已被初始化  
+            console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化  
+            console.log("%c%s", "color:red","message: " + this.message); //已被初始化  
         },
         mounted: function () {
             console.group('mounted 挂载结束状态===============》');
             console.log("%c%s", "color:red","el     : " + this.$el); //已被初始化
             console.log(this.$el);    
-               console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化
-               console.log("%c%s", "color:red","message: " + this.message); //已被初始化 
+            console.log("%c%s", "color:red","data   : " + this.$data); //已被初始化
+            console.log("%c%s", "color:red","message: " + this.message); //已被初始化 
         },
         beforeUpdate: function () {
             console.group('beforeUpdate 更新前状态===============》');
             console.log("%c%s", "color:red","el     : " + this.$el);
             console.log(this.$el);   
-               console.log("%c%s", "color:red","data   : " + this.$data); 
-               console.log("%c%s", "color:red","message: " + this.message); 
+            console.log("%c%s", "color:red","data   : " + this.$data); 
+            console.log("%c%s", "color:red","message: " + this.message); 
         },
         updated: function () {
             console.group('updated 更新完成状态===============》');
             console.log("%c%s", "color:red","el     : " + this.$el);
             console.log(this.$el); 
-               console.log("%c%s", "color:red","data   : " + this.$data); 
+            console.log("%c%s", "color:red","data   : " + this.$data); 
                console.log("%c%s", "color:red","message: " + this.message); 
         },
         beforeDestroy: function () {
@@ -120,7 +118,7 @@ Vue.component("aaa",{
         }
     },
     beforeCreate:function(){
-        console.log('beforeCreate:刚刚new Vue()之后，这个时候，数据还没有挂载呢，只是一个空壳')           
+        console.log('beforeCreate:刚刚new Vue()之后，这个时候，数据还没有挂载呢，只是一个空壳')        
         console.log(this.msg)//undefined
         console.log(document.getElementsByClassName("myp")[0])//undefined
     },
@@ -168,8 +166,6 @@ Vue.component("aaa",{
         console.log('destroyed:组件的数据绑定、监听...都去掉了,只剩下dom空壳，这里也可以善后')
     }
 })
-
-
 
 new Vue({
 }).$mount('#app')
