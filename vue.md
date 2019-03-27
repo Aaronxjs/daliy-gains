@@ -22,38 +22,28 @@ beforeDestory   组件销毁前调用
 
 destoryed       组件销毁后调用
 
-<!DOCTYPE html>
 
-<html>
-
-<head>
 
     <title></title>
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/vue/2.1.3/vue.js"></script>
 
-</head>
 
-<body>
 
-<div id="app">
 
     <p>{{ message }}</p>
 
-</div>
 
-<script type="text/javascript">
-    
-  var app = new Vue({
+    var app = new Vue({
 
-      el: '#app',
+        el: '#app',
 
-      data: {
+        data: {
 
         message : "xuxiao is boy" 
 
-      },
-       beforeCreate: function () {
+        },
+        beforeCreate: function () {
 
             console.group('beforeCreate 创建前状态===============》');
 
@@ -153,11 +143,6 @@ destoryed       组件销毁后调用
             console.log("%c%s", "color:red","message: " + this.message)
         }
     })
-</script>
-
-</body>
-
-</html>
 
 <!-- 实践调试： -->
 beforeCreate: el 和 data 并未初始化
